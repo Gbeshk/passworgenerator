@@ -206,7 +206,7 @@ function SetPassword({ setPassword }: SetPasswordProps) {
           />
         </div>
       </div>
-      <div>
+      <div className="hidden">
         <div className="w-[10px] h-[10px] bg-[#F64A4A]"></div>
         <div className="w-[10px] h-[10px] bg-[#FB7C58]"></div>
         <div className="w-[10px] h-[10px] bg-[#F8CD65]"></div>
