@@ -78,131 +78,141 @@ function SetPassword({ setPassword }: SetPasswordProps) {
   const symbolimg = includeSymbols ? "images/full.svg" : "images/blank.svg";
 
   return (
-    <div className="mt-[24px] w-[540px] h-[528px] bg-[#24232C] px-[32px]">
-      <div className="flex items-center mt-[24px] justify-between">
-        <p className="text-[#E6E5EA]  text-[18px]  leading-normal">
-          Character Length
-        </p>
-        <p className="text-[#A4FFAF]  text-[32px]  leading-normal">
-          {passwordLength}
-        </p>
-      </div>
-      <input
-        className="w-full mt-[16px] h-[8px] bg-[#A4FFAF] cursor-pointer "
-        type="range"
-        min="4"
-        max="20"
-        value={passwordLength}
-        onChange={(e) => setPasswordLength(Number(e.target.value))}
-      />
-      <div className="mt-[32px] gap-[24px] flex">
-        <Image
-          src={uppercaseimg}
-          alt="UppercaseCheckBox"
-          width={200}
-          height={200}
-          className="w-[20px] h-[20px] cursor-pointer"
-          onClick={() => setIncludeUppercase(!includeUpperCase)}
-        />
-        <p className="text-[#E6E5EA]  text-[18px] leading-normal tracking-normal">
-          Include Uppercase Letters
-        </p>
-      </div>
-      <div className="mt-[19px] gap-[24px] flex">
-        <Image
-          src={lowercaseimg}
-          alt="LowercaseCheckBox"
-          width={200}
-          height={200}
-          className="w-[20px] h-[20px] cursor-pointer"
-          onClick={() => setIncludeLowercase(!includeLowerCase)}
-        />
-        <p className="text-[#E6E5EA] text-[18px]  leading-normal tracking-normal">
-          Include Lowercase Letters
-        </p>
-      </div>
-      <div className="mt-[19px] gap-[24px] flex">
-        <Image
-          src={numberimg}
-          alt="NumberCheckBox"
-          width={200}
-          height={200}
-          className="w-[20px] h-[20px] cursor-pointer"
-          onClick={() => setIncludeNumbers(!includeNumbers)}
-        />
-        <p className="text-[#E6E5EA]  text-[18px]  leading-normal tracking-normal">
-          Include Numbers
-        </p>
-      </div>
-      <div className="mt-[19px] gap-[24px] flex">
-        <Image
-          src={symbolimg}
-          alt="NumberCheckBox"
-          width={200}
-          height={200}
-          className="w-[20px] h-[20px] cursor-pointer"
-          onClick={() => setIncludeSymbols(!includeSymbols)}
-        />
-        <p className="text-[#E6E5EA]  text-[18px]  leading-normal tracking-normal">
-          Include Symbols
-        </p>
-      </div>
-      <div className="w-[476px] h-[72px] bg-[#18171F] mt-[32px] flex items-center justify-between px-[32px]">
-        <p className="text-[#817D92]  text-[18px]  leading-normal">STRENGTH</p>
-        <div className="flex">
-          <p className="text-[#E6E5EA]   text-[24px]  leading-normal">
-            {passStrength}
+    <>
+      <div className="mt-[24px] w-[540px] h-[528px] bg-[#24232C] px-[32px]">
+        <div className="flex items-center mt-[24px] justify-between">
+          <p className="text-[#E6E5EA]  text-[18px]  leading-normal">
+            Character Length
           </p>
-          <div className="flex gap-[8px] ml-[15.5px]">
-            <div
-              className={`w-[10px] h-[28px] ${
-                strength >= 0
-                  ? `bg-[${color}] border-none`
-                  : "border-[2px] border-[#E6E5EA]"
-              }`}
-            ></div>
-            <div
-              className={`w-[10px] h-[28px] ${
-                strength >= 2
-                  ? `bg-[${color}] border-none`
-                  : "border-[2px] border-[#E6E5EA]"
-              }`}
-            ></div>
-            <div
-              className={`w-[10px] h-[28px] ${
-                strength >= 3
-                  ? `bg-[${color}] border-none`
-                  : "border-[2px] border-[#E6E5EA]"
-              }`}
-            ></div>
-            <div
-              className={`w-[10px] h-[28px] ${
-                strength >= 4
-                  ? `bg-[${color}] border-none`
-                  : "border-[2px] border-[#E6E5EA]"
-              }`}
-            ></div>
+          <p className="text-[#A4FFAF]  text-[32px]  leading-normal">
+            {passwordLength}
+          </p>
+        </div>
+        <input
+          className="w-full mt-[16px] h-[8px] bg-[#A4FFAF] cursor-pointer "
+          type="range"
+          min="4"
+          max="20"
+          value={passwordLength}
+          onChange={(e) => setPasswordLength(Number(e.target.value))}
+        />
+        <div className="mt-[32px] gap-[24px] flex">
+          <Image
+            src={uppercaseimg}
+            alt="UppercaseCheckBox"
+            width={200}
+            height={200}
+            className="w-[20px] h-[20px] cursor-pointer"
+            onClick={() => setIncludeUppercase(!includeUpperCase)}
+          />
+          <p className="text-[#E6E5EA]  text-[18px] leading-normal tracking-normal">
+            Include Uppercase Letters
+          </p>
+        </div>
+        <div className="mt-[19px] gap-[24px] flex">
+          <Image
+            src={lowercaseimg}
+            alt="LowercaseCheckBox"
+            width={200}
+            height={200}
+            className="w-[20px] h-[20px] cursor-pointer"
+            onClick={() => setIncludeLowercase(!includeLowerCase)}
+          />
+          <p className="text-[#E6E5EA] text-[18px]  leading-normal tracking-normal">
+            Include Lowercase Letters
+          </p>
+        </div>
+        <div className="mt-[19px] gap-[24px] flex">
+          <Image
+            src={numberimg}
+            alt="NumberCheckBox"
+            width={200}
+            height={200}
+            className="w-[20px] h-[20px] cursor-pointer"
+            onClick={() => setIncludeNumbers(!includeNumbers)}
+          />
+          <p className="text-[#E6E5EA]  text-[18px]  leading-normal tracking-normal">
+            Include Numbers
+          </p>
+        </div>
+        <div className="mt-[19px] gap-[24px] flex">
+          <Image
+            src={symbolimg}
+            alt="NumberCheckBox"
+            width={200}
+            height={200}
+            className="w-[20px] h-[20px] cursor-pointer"
+            onClick={() => setIncludeSymbols(!includeSymbols)}
+          />
+          <p className="text-[#E6E5EA]  text-[18px]  leading-normal tracking-normal">
+            Include Symbols
+          </p>
+        </div>
+        <div className="w-[476px] h-[72px] bg-[#18171F] mt-[32px] flex items-center justify-between px-[32px]">
+          <p className="text-[#817D92]  text-[18px]  leading-normal">
+            STRENGTH
+          </p>
+          <div className="flex">
+            <p className="text-[#E6E5EA]   text-[24px]  leading-normal">
+              {passStrength}
+            </p>
+            <div className="flex gap-[8px] ml-[15.5px]">
+              <div
+                className={`w-[10px] h-[28px] ${
+                  strength >= 0
+                    ? `bg-[${color}] border-none`
+                    : "border-[2px] border-[#E6E5EA]"
+                }`}
+              ></div>
+              <div
+                className={`w-[10px] h-[28px] ${
+                  strength >= 2
+                    ? `bg-[${color}] border-none`
+                    : "border-[2px] border-[#E6E5EA]"
+                }`}
+              ></div>
+              <div
+                className={`w-[10px] h-[28px] ${
+                  strength >= 3
+                    ? `bg-[${color}] border-none`
+                    : "border-[2px] border-[#E6E5EA]"
+                }`}
+              ></div>
+              <div
+                className={`w-[10px] h-[28px] ${
+                  strength >= 4
+                    ? `bg-[${color}] border-none`
+                    : "border-[2px] border-[#E6E5EA]"
+                }`}
+              ></div>
+            </div>
           </div>
         </div>
+        <div
+          onClick={() => {
+            Generate();
+          }}
+          className="w-[476px] h-[65px] bg-[#A4FFAF] mt-[32px] cursor-pointer flex items-center justify-center gap-[24px] "
+        >
+          <h1 className="text-dark-grey  text-[18px] leading-normal ">
+            GENERATE
+          </h1>
+          <Image
+            src={"images/arrow.svg"}
+            alt="arrow"
+            width={200}
+            height={200}
+            className="w-[11px] h-[12px] cursor-pointer"
+          />
+        </div>
       </div>
-      <div
-        onClick={() => {
-          Generate();
-        }}
-        className="w-[476px] h-[65px] bg-[#A4FFAF] mt-[32px] cursor-pointer flex items-center justify-center gap-[24px] "
-      >
-        <h1 className="text-dark-grey  text-[18px] leading-normal ">
-          GENERATE
-        </h1>
-        <Image
-          src={"images/arrow.svg"}
-          alt="arrow"
-          width={200}
-          height={200}
-          className="w-[11px] h-[12px] cursor-pointer"
-        />
+      <div>
+        <div className="w-[10px] h-[10px] bg-[#F64A4A]"></div>
+        <div className="w-[10px] h-[10px] bg-[#FB7C58]"></div>
+        <div className="w-[10px] h-[10px] bg-[#F8CD65]"></div>
+        <div className="w-[10px] h-[10px] bg-[#A4FFAF]"></div>
       </div>
-    </div>
+    </>
   );
 }
 
