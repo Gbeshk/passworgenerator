@@ -155,30 +155,30 @@ function SetPassword({ setPassword }: SetPasswordProps) {
           </p>
           <div className="flex gap-[8px] ml-[15.5px]">
             <div
-              className={`w-[10px] h-[28px] border-[2px] border-[#E6E5EA] ${
+              className={`w-[10px] h-[28px] ${
                 strength >= 0
-                  ? `border-none bg-[${color}]`
+                  ? `bg-[${color}] border-none`
                   : "border-[2px] border-[#E6E5EA]"
               }`}
             ></div>
             <div
-              className={`w-[10px] h-[28px] border-[2px] border-[#E6E5EA] ${
+              className={`w-[10px] h-[28px] ${
                 strength >= 2
-                  ? `border-none bg-[${color}]`
+                  ? `bg-[${color}] border-none`
                   : "border-[2px] border-[#E6E5EA]"
               }`}
             ></div>
             <div
-              className={`w-[10px] h-[28px] border-[2px] border-[#E6E5EA] ${
+              className={`w-[10px] h-[28px] ${
                 strength >= 3
-                  ? `border-none bg-[${color}]`
+                  ? `bg-[${color}] border-none`
                   : "border-[2px] border-[#E6E5EA]"
               }`}
             ></div>
             <div
-              className={`w-[10px] h-[28px] border-[2px] border-[#E6E5EA] ${
+              className={`w-[10px] h-[28px] ${
                 strength >= 4
-                  ? `border-none bg-[${color}]`
+                  ? `bg-[${color}] border-none`
                   : "border-[2px] border-[#E6E5EA]"
               }`}
             ></div>
