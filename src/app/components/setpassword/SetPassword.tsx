@@ -10,8 +10,9 @@ import Strength from "../strength/Strength";
 import GenerateDiv from "../generate/GenerateDiv";
 interface SetPasswordProps {
   setPassword: React.Dispatch<React.SetStateAction<string>>;
+  setCopied: React.Dispatch<React.SetStateAction<string>>;
 }
-function SetPassword({ setPassword }: SetPasswordProps) {
+function SetPassword({ setPassword, setCopied }: SetPasswordProps) {
   const [passwordLength, setPasswordLength] = useState(8);
   const [includeUpperCase, setIncludeUppercase] = useState(true);
   const [includeLowerCase, setIncludeLowercase] = useState(true);
@@ -95,6 +96,7 @@ function SetPassword({ setPassword }: SetPasswordProps) {
           includeSymbols={includeSymbols}
           passwordLength={passwordLength}
           setPassword={setPassword}
+          setCopied={setCopied}
         />
       </div>
       <div className="hidden">
